@@ -5,10 +5,12 @@ export default function Contact() {
         <div className="grid gap-10 md:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)]">
           {/* Left: heading + copy */}
           <div className="space-y-4">
+            
             <p className="text-xs font-semibold uppercase tracking-[0.25em] text-black">
               Contact us
             </p>
-            <h2 className="text-3xl font-extrabold text-black">
+            <div className="bg-white p-6 border-2 border-black shadow-[6px_6px_0_#000]">
+            <h2 className="text-3xl font-extrabold text-black mb-4">
               Let&apos;s Start Your Learning Journey
             </h2>
             <p className="max-w-md text-sm leading-relaxed text-black/80">
@@ -27,6 +29,8 @@ export default function Contact() {
                 Phone:{" "}
                 <span className="font-normal">+1 (555) 123-4567</span>
               </p>
+            </div>
+
             </div>
           </div>
 
