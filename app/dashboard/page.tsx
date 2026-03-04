@@ -6,6 +6,7 @@ export default function DashboardPage() {
   const [answer, setAnswer] = useState("");
   const [score, setScore] = useState<number | null>(null);
   const [showSubjects, setShowSubjects] = useState(false);
+  const [isFavorite, setIsFavorite] = useState(false);
 
   const handleRunTest = () => {
     // Dummy scoring logic just for UI demo
@@ -48,7 +49,18 @@ export default function DashboardPage() {
                 course to a student.
               </h1>
             </div>
-
+            <button
+              type="button"
+              onClick={() => setIsFavorite((prev) => !prev)}
+              className={`flex items-center gap-1 rounded-full border px-3 py-1 text-xs font-semibold ${
+                isFavorite
+                  ? "border-yellow-400 bg-yellow-100 text-yellow-800"
+                  : "border-slate-300 bg-white text-slate-700 hover:bg-slate-50"
+              }`}
+            >
+              <span>{isFavorite ? "★" : "☆"}</span>
+              <span>{isFavorite ? "Favorited" : " favorite"}</span>
+            </button>
           </header>
 
           {/* Result panel (shown after test) */}
